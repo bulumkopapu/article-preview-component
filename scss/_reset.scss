@@ -1,47 +1,38 @@
 //FONT INSTALL
-@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;700&display=swap');
 
 //COLOR VARIABLES
-$gradient: linear-gradient(180deg, #B068E9 0%, #6463E7 100%);;
-$black: #1E1F36;
-$white: #ffffff;
-$accent: #F47B56;
+$background: #ECF2F8;
+$black: #48556A;
+$grey: #6E8098;
 
 //FONT WEIGHTS
-$font-weights:(
-	"regular": 400,
-	"bold": 700
-); 
+// $font-weights:(
+// 	"regular": 200,
+// 	"bold": 700
+// ); 
 
-@function weight($weight){
-	@return map-get($font-weights, $weight);
-}
+// @function weight($weight){
+// 	@return map-get($font-weights, $weight);
+// }
+
 
 //FONT FAMILY
-@mixin fontFamilySmall ($fontWeight){
-    font-family: 'Kumbh Sans', sans-serif;
+@mixin fontFamily ($fontWeight, $fontSize, $lineHeight, $color){
+    font-family: 'Manrope', sans-serif;
     font-style: normal;
-    font-weight: weight($fontWeight);
-    font-size: 13px;
-    line-height: 14px;
-    color: #4B4C5F;
+    font-weight: $fontWeight;
+    font-size: $fontSize;
+    line-height: $lineHeight;
+    color: $color;
 }
 
-@mixin fontFamilyLarge ($fontWeight){
-    font-family: 'Kumbh Sans', sans-serif;
-    font-style: normal;
-    font-weight: weight($fontWeight);
-    font-size: 32px;
-    line-height: 32px;
-    color: $black;
-}
-
-h1 {
-    @include fontFamilyLarge(bold);
+h1, h2, h3 {
+    @include fontFamily(700, 16px, 24px, $black);
 }
 
 p, a {
-    @include fontFamilySmall(regular);
+    @include fontFamily(200, 13px, 20px, $grey);
 }
 
 //CSS RESET
@@ -61,7 +52,7 @@ a {
 
 //CONTAINER SETTINGS
 .container {
-    max-width: 920px;
+    max-width: 1440px;
     margin: 0 auto;
 }
 
