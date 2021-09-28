@@ -60,5 +60,5 @@ a {
 
 //MEDIA QUERIES
 @mixin desktop-screen {
-    @media (min-width: 969px) { @content }
+    @media (min-width: 778px) { @content }
 }

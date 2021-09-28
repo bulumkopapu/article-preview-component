@@ -58,6 +58,16 @@ main {
   max-width: 730px;
   margin-top: 74px;
   margin-bottom: 81px;
+  -webkit-box-shadow: 0px 40px 40px -10px rgba(201, 213, 225, 0.503415);
+          box-shadow: 0px 40px 40px -10px rgba(201, 213, 225, 0.503415);
+}
+
+@media (min-width: 778px) {
+  .card-component {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .card-component .image-box {
@@ -66,8 +76,24 @@ main {
   border-radius: 10px 10px 0  0;
 }
 
-.card-component .image-box img {
+.card-component .image-box #mobile {
   width: 100%;
+}
+
+@media (min-width: 778px) {
+  .card-component .image-box #mobile {
+    display: none;
+  }
+}
+
+.card-component .image-box #desktop {
+  display: none;
+}
+
+@media (min-width: 778px) {
+  .card-component .image-box #desktop {
+    display: block;
+  }
 }
 
 .card-component .text-box {
@@ -77,11 +103,63 @@ main {
   padding: 36px 32px 0 32px;
 }
 
+@media (min-width: 778px) {
+  .card-component .text-box {
+    padding: 32px 40px 0 40px;
+    max-width: 485px;
+    min-height: 280px;
+  }
+}
+
+@media (min-width: 778px) {
+  .card-component .text-box .main-text h1 {
+    font-family: 'Manrope', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+    color: #48556A;
+  }
+}
+
 .card-component .text-box .main-text p {
   margin-top: 12px;
 }
 
 .card-component .text-box .profile-section {
   margin-top: 52px;
+  padding-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (min-width: 778px) {
+  .card-component .text-box .profile-section {
+    margin-top: 20px;
+  }
+}
+
+.card-component .text-box .profile-section .profile-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.card-component .text-box .profile-section .profile-info img {
+  margin-right: 16px;
+  max-height: 40px;
+}
+
+.card-component .text-box .profile-section .profile-info .info h2 {
+  font-family: 'Manrope', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 20px;
+  color: #48556A;
 }
 /*# sourceMappingURL=main.css.map */
