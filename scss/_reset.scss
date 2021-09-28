@@ -29,10 +29,12 @@ $grey: #6E8098;
 
 h1, h2, h3 {
     @include fontFamily(700, 16px, 24px, $black);
+    
 }
 
 p, a {
     @include fontFamily(200, 13px, 20px, $grey);
+    
 }
 
 //CSS RESET

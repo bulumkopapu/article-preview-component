@@ -13,13 +13,37 @@ main {
 
 .card-component {
     max-width: 730px;
+    margin-top: 74px;
+    margin-bottom: 81px;
+   
 
     .image-box {
+        max-width: 327px;
+        background: #fff;
+        border-radius: 10px 10px 0  0;
         img {
             width: 100%;
         }
     }
-    
+
+    .text-box {
+        background: #fff;
+        max-width: 327px;
+        min-height: 312px;
+        padding: 36px 32px 0 32px;
+
+        .main-text p {
+            margin-top: 12px;
+        }
+        .profile-section {
+            margin-top: 52px;
+            
+            .profile-info{
+
+            }
+        }
+    }
+
     
 }
 
