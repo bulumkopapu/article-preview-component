@@ -18,8 +18,7 @@ p, a {
 }
 
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -47,27 +46,18 @@ body {
 
 main {
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .card-component {
   max-width: 730px;
-  -webkit-box-shadow: 0px 40px 40px -10px rgba(201, 213, 225, 0.503415);
-          box-shadow: 0px 40px 40px -10px rgba(201, 213, 225, 0.503415);
+  box-shadow: 0px 40px 40px -10px rgba(201, 213, 225, 0.503415);
 }
 
 @media (min-width: 778px) {
   .card-component {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
   }
 }
@@ -139,10 +129,8 @@ main {
 .card-component .text-box .profile-section {
   margin-top: 52px;
   padding-bottom: 20px;
-  display: none;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 @media (min-width: 778px) {
@@ -152,8 +140,6 @@ main {
 }
 
 .card-component .text-box .profile-section .profile-info {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -179,37 +165,41 @@ main {
   width: 98%;
 }
 
+.card-component .profile-section-desktop {
+  position: absolute;
+  display: flex;
+  width: 248px;
+  height: 67px;
+  left: 905px;
+  top: 389px;
+  background: #48556A;
+  box-shadow: 0px 10px 10px rgba(201, 213, 225, 0.503415);
+}
+
 .card-component .profile-section-mobile {
   position: relative;
-  top: -50px;
-  width: 100%;
+  top: -64px;
+  margin-bottom: -64px;
+  max-width: 327px;
   height: 64px;
   padding: 0 32px 0 32px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
   background-color: #48556A;
+  border-radius: 0 0 10px 10px;
 }
 
 @media (min-width: 778px) {
   .card-component .profile-section-mobile {
-    margin-top: 20px;
+    display: none;
   }
 }
 
 .card-component .profile-section-mobile .profile-info-mobile {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   max-width: 175px;
   width: 100%;
 }
